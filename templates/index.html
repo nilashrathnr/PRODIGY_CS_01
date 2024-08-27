@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Encryption & Decryption</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Caesar Cipher Encryption & Decryption</h1>
+        <form method="POST">
+            <label for="text">Enter text:</label>
+            <textarea id="text" name="text" rows="4" required></textarea>
+
+            <label for="shift">Shift value:</label>
+            <input type="number" id="shift" name="shift" required>
+
+            <label for="mode">Choose mode:</label>
+            <select id="mode" name="mode" required>
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+
+            <button type="submit">Submit</button>
+
+            <!-- Result Textbox -->
+            <label for="result">Result:</label>
+            <textarea id="result" name="result" rows="4" readonly>{{ result_text }}</textarea>
+        </form>
+    </div>
+</body>
+</html>
